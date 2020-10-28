@@ -1,4 +1,5 @@
-[
+export default {
+property: [
     {​​​​​​​
         "weekno": 1,
         "buds": [
@@ -7,7 +8,7 @@
                 "items" : [
                     {
                         "​​​​​​​label": "DevOps PPT",
-                         "url":"https://autora-my.sharepoint.com/:p:/r/personal/saianurag_varanasi_autorabit_com/Documents/AutoBuds%20Resources/Autobuds%20Presentations%20Week%201/AutoBuds1_Week1.pptx?d=w06385ecf2ca3413b95dd3fbec061609a&csf=1&web=1&e=4apqbq"
+                        "url":"https://autora-my.sharepoint.com/:p:/r/personal/saianurag_varanasi_autorabit_com/Documents/AutoBuds%20Resources/Autobuds%20Presentations%20Week%201/AutoBuds1_Week1.pptx?d=w06385ecf2ca3413b95dd3fbec061609a&csf=1&web=1&e=4apqbq"
                     }​​​​​​​, 
                     {
                         "​​​​​​​label": "DevOps recording", 
@@ -138,3 +139,4 @@
         ]
     }​​​​​​​
 ]
+}
