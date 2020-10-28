@@ -18,7 +18,9 @@ import { MyteamComponent } from './myteam/myteam.component';
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 import {DialogModule} from 'primeng/dialog';
-
+import { TeamService } from './team.service';
+import { AddMemberComponent } from './myteam/add-member/add-member.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import {DialogModule} from 'primeng/dialog';
     ContactUsComponent,
     HolderComponent,
     PageNotFoundComponent,
-    MyteamComponent
+    MyteamComponent,
+    AddMemberComponent
   ],
   imports: [
     BrowserModule,
@@ -40,9 +43,10 @@ import {DialogModule} from 'primeng/dialog';
     FormsModule,
     CardModule,
     ButtonModule,
-    DialogModule
+    DialogModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [TeamService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
