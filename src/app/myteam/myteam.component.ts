@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TeamService } from '../team.service';
+import { TeamMember } from '../teammember.component';
 
 @Component({
   selector: 'app-myteam',
@@ -7,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyteamComponent implements OnInit {
 
-  constructor() { }
+  constructor(private teamService: TeamService) { }
   displayModal: boolean;
-  
+  public teams: TeamMember[];
   ngOnInit(): void {
+    this.teams = this.teamService.getData();
+    console.log(this.teams);
   }
 
   showModalDialog() {

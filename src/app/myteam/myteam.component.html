@@ -1,23 +1,13 @@
 <div class="p-grid">
-    <div class="p-md-4 p-sm-6">
-        <p-card>
+    <div class="p-md-4 p-sm-6" *ngFor = "let team of teams" >
+        <p-card >
             <div  class=" p-d-flex p-ac-center p-flex-column" >
-                <p-header>Content</p-header>
+                <p-header>{{team.empid}}</p-header>
+                <p-header>{{team.details.name}}</p-header>
                 <button pButton type="button" label="Click" label="Profile" class="p-button-info"></button>
             </div>
         </p-card>
     </div>
-    <div class="p-md-4 p-sm-6">
-        <p-card >
-            Content
-        </p-card>
-    </div>
-    <div class="p-md-4 p-sm-6">
-        <p-card>
-            Content
-        </p-card>
-    </div>
-    
 </div>
 
 <p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Show"></p-button>
