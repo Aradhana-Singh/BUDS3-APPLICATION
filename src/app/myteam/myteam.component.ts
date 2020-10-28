@@ -11,13 +11,21 @@ export class MyteamComponent implements OnInit {
 
   constructor(private teamService: TeamService) { }
   displayModal: boolean;
+  displayMember: boolean;
   public teams: TeamMember[];
+  public profile: TeamMember;
   ngOnInit(): void {
     this.teams = this.teamService.getData();
-    console.log(this.teams);
   }
 
   showModalDialog() {
     this.displayModal = true;
   }
+
+  showMemberDialog(memberData: TeamMember){
+    this.displayMember = true;
+    this.profile = memberData;
+    console.log(memberData);
+  }
+
 }

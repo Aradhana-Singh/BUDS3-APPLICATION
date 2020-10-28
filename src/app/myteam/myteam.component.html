@@ -4,19 +4,24 @@
             <div  class=" p-d-flex p-ac-center p-flex-column" >
                 <p-header>{{team.empid}}</p-header>
                 <p-header>{{team.details.name}}</p-header>
-                <button pButton type="button" label="Click" label="Profile" class="p-button-info"></button>
+                <!-- <button pButton type="button" label="Click" label="Profile" class="p-button-info"></button> -->
+                <p-button (click)="showMemberDialog(team)" icon="pi pi-external-link" label="Show"></p-button>
             </div>
         </p-card>
     </div>
 </div>
 
-<p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Show"></p-button>
+
+<p-dialog header="Profile" [(visible)]="displayMember" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false">
+    <div *ngIf = "displayMember">{{profile.empid}}</div>
+    <div *ngIf = "displayMember">{{profile.details.name}}</div>
+</p-dialog>
+
+<p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Add Member"></p-button>
 <p-dialog header="Add Team Member" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
     [draggable]="false" [resizable]="false">
         <app-add-member></app-add-member>
-        <!-- <ng-template pTemplate="footer">
-        <p-button icon="pi pi-check" (click)="displayModal=false" label="Yes" styleClass="p-button-text"></p-button>
-        </ng-template> -->
 </p-dialog>
 
 
