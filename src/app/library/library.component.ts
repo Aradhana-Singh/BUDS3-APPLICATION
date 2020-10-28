@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import budsFiles from 'src/app/_files/budsFiles.json';
 @Component({
   selector: 'app-library',
   templateUrl: './library.component.html',
