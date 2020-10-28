@@ -25,7 +25,7 @@ export class AddMemberComponent implements OnInit {
   }
   
   onAddMember(name, email, empid){
-    console.log(x, y, z);
+    // console.log(x, y, z);
     this.teamMember = {
       "empid": empid,
       "details": {
