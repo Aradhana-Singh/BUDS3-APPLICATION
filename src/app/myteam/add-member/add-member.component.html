@@ -1,9 +1,10 @@
 
 <!-- <div class = "row m-0"> -->
-    <div class = "p-fluid">
+    <!-- <div class = "p-fluid">
     <form>            
-        <div class="form-group p-field">
-            <input type="text" required maxlength="30" minlength="10"
+        <div class="form-group "> -->
+            <!-- <label for="Name">Name</label> -->
+            <!-- <input type="text" required maxlength="30" minlength="10"
                     ngModel name="name" #name="ngModel" (change)="log(name)"
                     class="form-control" 
                     id="exampleInputText" placeholder="Name" pInputText>
@@ -19,11 +20,12 @@
                     Name must be at least 10 characters long.
                 </div>
             </div>     
-        </div>
+        </div> -->
         
         
-        <div class="form-group">    
-            <input type="text"
+        <!-- <div class="form-group"> -->
+            <!-- <label for="exampleInputEmpId">EmpId</label> -->
+            <!-- <input type="text"
             required 
             pattern = "^[0-9]*$"
             ngModel name="empid" #empid="ngModel" (change)="log(empid)"
@@ -37,13 +39,13 @@
                     Must be a number
                 </div>
             </div>
-        </div>
+        </div> -->
         
         
-        <div class="form-group">
+        <!-- <div class="form-group"> -->
+            <!-- <label for="exampleInputEmail1">Email address</label> -->
             
-            
-            <input type="email"
+            <!-- <input type="email"
                 required pattern = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
                 ngModel name="email" #email="ngModel" (change)="log(email)"
                 class="form-control" id="exampleInputEmpId" class="form-control" id="exampleInputEmail1" placeholder="Email">
@@ -60,26 +62,120 @@
                 </div>
             </div>
     
-            <br>
+            <br> -->
     
-            <div class="text-center">
-                <button type="button" class="btn btn-primary" (click)="onAddMember(name.value, email.value, empid.value)">Submit</button>
+            <!-- <div class="text-center"> -->
+                <!-- <button type="button" class="btn btn-primary" (click)="onClick({'name': name.value, 'email': email.value, 'empid': empid.value, 'phone': phone.value, 'address': address.value. 'work_link': { 'github': github.value, 'linkedin': linkedin.value}})">Submit</button> -->
+                <!-- rohit add input fields here, as per the json obj structure, written in the above line onclick func call.-->
+                <!-- <button type="button" class="btn btn-primary" (click)="onAddMember(name.value, email.value, empid.value)">Submit</button>
             </div>
         </div>
             
-    </form>
+    </form> -->
+<!--     
+    </div>     -->
+        
+<!--     
+    </div> -->
     
-    </div>    
-<!-- </div> -->
-    
-<!-- <h5>Vertical</h5>
-<div class="p-fluid">
-    <div class="p-field">
-        <label for="firstname1">Name</label>
-        <input id="firstname1" type="text" pInputText> 
-    </div>
-    <div class="p-field">
-        <label for="lastname1">Lastname</label>
-        <input id="lastname1" type="text" pInputText> 
-    </div>
-</div> -->
+<form [formGroup]="form">
+    <div class="p-fluid">
+        <div class="p-field">
+            <div class =form-group>
+                <input formControlName = "name" type = "text" placeholder = "Name" pInputText>
+            </div>
+            <div class = "validators" *ngIf ="form.touched">
+                <span>
+                    <br>
+                    <i class="fa fa-times-circle" style = "color: firebrick;" *ngIf = "form.controls.name.invalid" ></i>
+                    <i class="fa fa-check-circle" style = "color: green;" *ngIf = "form.controls.name.valid" ></i>
+                    Username should be minimum 4 characters long
+                </span>
+            </div>
+        </div>
+        <div class="p-field">
+            <div class =form-group>
+                <input formControlName = "empid" type = "text" placeholder = "EmpId" pInputText>
+            </div>
+            <div class = "validators" *ngIf ="form.touched">
+                <span>
+                    <br>
+                    <i class="fa fa-times-circle" style = "color: firebrick;" *ngIf = "form.controls.empid.invalid" ></i>
+                    <i class="fa fa-check-circle" style = "color: green;" *ngIf = "form.controls.empid.valid" ></i>
+                   Empid must me a number
+                </span>
+            </div>
+        </div>
+        <div class="p-field">
+            <div class =form-group>
+                <input formControlName = "email" type = "text" placeholder = "Email" pInputText>
+            </div>
+            <div class = "validators" *ngIf ="form.touched">
+                <span>
+                    <br>
+                    <i class="fa fa-times-circle" style = "color: firebrick;" *ngIf = "form.controls.email.invalid" ></i>
+                    <i class="fa fa-check-circle" style = "color: green;" *ngIf = "form.controls.email.valid" ></i>
+                   Must be a proper Email
+                </span>
+            </div>
+        </div>
+        <div class="p-field">
+            <div class =form-group>
+                <input formControlName = "phone" type = "text" placeholder = "Phone Number" pInputText>
+            </div>
+            <div class = "validators" *ngIf ="form.touched">
+                <span>
+                    <br>
+                    <i class="fa fa-times-circle" style = "color: firebrick;" *ngIf = "form.controls.phone.invalid" ></i>
+                    <i class="fa fa-check-circle" style = "color: green;" *ngIf = "form.controls.phone.valid" ></i>
+                   Phone number must contain exactly 10 digits                   
+                </span>
+            </div>
+        </div>
+        <div class="p-field">
+            <div class =form-group>
+                <textarea formControlName = "address" rows="5" cols="30" pInputTextarea placeholder="Address" ></textarea>
+            </div>
+        </div>
+        <div class="p-field">
+            <div class =form-group>
+                <input formControlName = "designation" type = "text" placeholder = "Designation" pInputText>
+            </div>
+        </div>
+        <div class="p-field">
+            <div class =form-group>
+                <input formControlName = "experience" type = "text" placeholder = "Experience" pInputText>
+            </div>
+        </div>
+        <div class="p-field">
+            <div class =form-group>
+                <input formControlName = "skills" type = "text" placeholder = "Technical Skills" pInputText>
+            </div>
+        </div>
+        <div class="p-field">
+            <div class =form-group>
+                <textarea formControlName = "bio" rows="5" cols="30" pInputTextarea placeholder="Biography" ></textarea>
+            </div>
+        </div>
+        <div class="p-field">
+            <div class =form-group>
+                <input formControlName = "github" type = "text" placeholder = "GitHub-ID" pInputText>
+            </div>
+        </div>
+        <div class="p-field">
+            <div class =form-group>
+                <input formControlName = "facebook" type = "text" placeholder = "Facebook-ID" pInputText>
+            </div>
+        </div>
+        <div class="p-field">
+            <div class =form-group>
+                <input formControlName = "linkedin" type = "text" placeholder = "LinkedIn-ID" pInputText>
+            </div>
+        </div>
+        <div class="p-field">
+            <p-button label="Submit" (click)="onSubmit()"></p-button>
+        </div> 
+    </div>     
+</form>
+
+

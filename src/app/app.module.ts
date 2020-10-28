@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component'; 
@@ -20,9 +20,11 @@ import {ButtonModule} from 'primeng/button';
 import {DialogModule} from 'primeng/dialog';
 import { TeamService } from './team.service';
 import { AddMemberComponent } from './myteam/add-member/add-member.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import {AccordionModule} from 'primeng/accordion';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 import {ListboxModule} from 'primeng/listbox';
+import {AccordionModule} from 'primeng/accordion';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +36,7 @@ import {ListboxModule} from 'primeng/listbox';
     HolderComponent,
     PageNotFoundComponent,
     MyteamComponent,
-    AddMemberComponent
+    AddMemberComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,9 @@ import {ListboxModule} from 'primeng/listbox';
     DialogModule,
     BrowserAnimationsModule,
     AccordionModule, 
-    ListboxModule
+    ListboxModule,
+    ReactiveFormsModule,
+    InputTextareaModule
   ],
   providers: [TeamService],
   bootstrap: [AppComponent]
