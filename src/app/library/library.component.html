@@ -1,1 +1,27 @@
-<p>library works!</p>
+<div class="p-d-flex p-jc-center p-ai-center p-flex-column">
+    <h2 class="">AutoBuds Learnings</h2>
+
+    <p-accordion *ngFor="let learning of learnings">
+        <!-- {{learning.weekno}} -->
+        <p-accordionTab header="Week {{learning.weekno}}">
+            <p-accordion let *ngFor="let bud of learning.buds">
+                <p-accordionTab header="Autobuds {{bud.budsno}}">
+                     <p-listbox [options]="bud.items">
+                        <ng-template let-item pTemplate="item">
+                            <div class="">
+                                <a href="{{item.url}}" >{{item.label}}</a>
+                            </div>
+                        </ng-template>
+                    </p-listbox>
+                </p-accordionTab>
+            </p-accordion>
+        </p-accordionTab>
+
+        <!-- <p-accordionTab header="AutoBuds1">
+            <p-listbox [options]="data[0].buds1" optionLabel="name" ></p-listbox>
+        </p-accordionTab> -->
+    </p-accordion>
+    
+
+</div>
+

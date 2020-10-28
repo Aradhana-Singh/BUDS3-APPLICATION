@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import learnings_data from '../__files/budsFiles';
 
 @Component({
   selector: 'app-library',
@@ -9,7 +10,8 @@ export class LibraryComponent implements OnInit {
 
   constructor() { }
 
+  public learnings  = learnings_data.property;
+
   ngOnInit(): void {
   }
-
 }
