@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class MyteamComponent implements OnInit {
 
   constructor() { }
-
+  displayModal: boolean;
+  
   ngOnInit(): void {
   }
 
+  showModalDialog() {
+    this.displayModal = true;
+  }
 }

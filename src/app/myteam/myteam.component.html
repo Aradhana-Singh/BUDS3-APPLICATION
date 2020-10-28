@@ -17,7 +17,17 @@
             Content
         </p-card>
     </div>
+    
 </div>
+
+<p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Show"></p-button>
+<p-dialog header="Add Team Member" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false">
+        <app-add-member></app-add-member>
+        <!-- <ng-template pTemplate="footer">
+        <p-button icon="pi pi-check" (click)="displayModal=false" label="Yes" styleClass="p-button-text"></p-button>
+        </ng-template> -->
+</p-dialog>
 
 
 
