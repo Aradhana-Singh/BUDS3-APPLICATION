@@ -3,7 +3,7 @@
         <p-card >
             <div  class=" p-d-flex p-ac-center p-flex-column" >
                 <p-header>{{team.empid}}</p-header>
-                <p-header>{{team.details.name}}</p-header>
+                <p-header>{{team.name}}</p-header>
                 <!-- <button pButton type="button" label="Click" label="Profile" class="p-button-info"></button> -->
                 <p-button (click)="showMemberDialog(team)" icon="pi pi-external-link" label="Show"></p-button>
             </div>
@@ -15,7 +15,15 @@
 <p-dialog header="Profile" [(visible)]="displayMember" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
     [draggable]="false" [resizable]="false">
     <div *ngIf = "displayMember">{{profile.empid}}</div>
-    <div *ngIf = "displayMember">{{profile.details.name}}</div>
+    <div *ngIf = "displayMember">{{profile.name}}</div>
+    <div *ngIf = "displayMember">{{profile.designation}}</div>
+    <div *ngIf = "displayMember">{{profile.experience}}</div>
+    <div *ngIf = "displayMember">{{profile.skills}}</div>
+    <div *ngIf = "displayMember">{{profile.bio}}</div>
+    <div *ngIf = "displayMember">{{profile.address}}</div>
+    <div *ngIf = "displayMember">{{profile.facebook}}</div>
+    <div *ngIf = "displayMember">{{profile.github}}</div>
+    <div *ngIf = "displayMember">{{profile.linkedin}}</div>
 </p-dialog>
 
 <p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Add Member"></p-button>
