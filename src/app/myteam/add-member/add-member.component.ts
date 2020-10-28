@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ɵELEMENT_PROBE_PROVIDERS } from '@angular/platform-browser';
 import { TeamService } from 'src/app/team.service';
 import { TeamMember } from 'src/app/teammember.component';
 

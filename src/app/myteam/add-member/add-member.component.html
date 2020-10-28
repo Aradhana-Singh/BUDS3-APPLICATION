@@ -1,30 +1,28 @@
 
-<div class = "row m-0">
-    <div class = "col-md-5 mx-auto text-center m-5">
+<!-- <div class = "row m-0"> -->
+    <div class = "p-fluid">
     <form>            
-        <div class="form-group">
-            <!-- <label for="Name">Name</label> -->
+        <div class="form-group p-field">
             <input type="text" required maxlength="30" minlength="10"
                     ngModel name="name" #name="ngModel" (change)="log(name)"
                     class="form-control" 
-                    id="exampleInputText" placeholder="Name">
+                    id="exampleInputText" placeholder="Name" pInputText>
             <div *ngIf="name.invalid && (name.dirty || name.touched)"
                     class="alert alert-danger">
-            <div *ngIf="name.errors.required">
-                Name is required.
-            </div>
-            <div *ngIf="name.errors.maxlength">
-                Name cannot be more than 30 characters long.
-            </div>
-            <div *ngIf="name.errors.minlength">
-                Name must be at least 10 characters long.
-            </div>
+                <div *ngIf="name.errors.required">
+                    Name is required.
+                </div>
+                <div *ngIf="name.errors.maxlength">
+                    Name cannot be more than 30 characters long.
+                </div>
+                <div *ngIf="name.errors.minlength">
+                    Name must be at least 10 characters long.
+                </div>
             </div>     
         </div>
         
         
-        <div class="form-group">
-            <!-- <label for="exampleInputEmpId">EmpId</label> -->
+        <div class="form-group">    
             <input type="text"
             required 
             pattern = "^[0-9]*$"
@@ -43,7 +41,7 @@
         
         
         <div class="form-group">
-            <!-- <label for="exampleInputEmail1">Email address</label> -->
+            
             
             <input type="email"
                 required pattern = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
@@ -65,8 +63,6 @@
             <br>
     
             <div class="text-center">
-                <!-- <button type="button" class="btn btn-primary" (click)="onClick({'name': name.value, 'email': email.value, 'empid': empid.value, 'phone': phone.value, 'address': address.value. 'work_link': { 'github': github.value, 'linkedin': linkedin.value}})">Submit</button> -->
-                <!-- rohit add input fields here, as per the json obj structure, written in the above line onclick func call.-->
                 <button type="button" class="btn btn-primary" (click)="onAddMember(name.value, email.value, empid.value)">Submit</button>
             </div>
         </div>
@@ -74,7 +70,16 @@
     </form>
     
     </div>    
-        
+<!-- </div> -->
     
+<!-- <h5>Vertical</h5>
+<div class="p-fluid">
+    <div class="p-field">
+        <label for="firstname1">Name</label>
+        <input id="firstname1" type="text" pInputText> 
     </div>
-    
+    <div class="p-field">
+        <label for="lastname1">Lastname</label>
+        <input id="lastname1" type="text" pInputText> 
+    </div>
+</div> -->
