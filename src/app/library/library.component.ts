@@ -9,6 +9,18 @@ export class LibraryComponent implements OnInit {
 
   constructor() { }
 
+  public learnings = [
+    {
+        weekno: 0,
+        buds: [
+            {
+                budsno: 1,
+                items: [{label: "DevOps PPT", url:""}, {label: "DevOps recording", url:""}]
+            }
+        ]
+    }
+  ];
+
   ngOnInit(): void {
   }
 

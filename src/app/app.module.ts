@@ -21,6 +21,8 @@ import {DialogModule} from 'primeng/dialog';
 import { TeamService } from './team.service';
 import { AddMemberComponent } from './myteam/add-member/add-member.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {AccordionModule} from 'primeng/accordion';
+import {ListboxModule} from 'primeng/listbox';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     CardModule,
     ButtonModule,
     DialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AccordionModule, 
+    ListboxModule
   ],
   providers: [TeamService],
   bootstrap: [AppComponent]
