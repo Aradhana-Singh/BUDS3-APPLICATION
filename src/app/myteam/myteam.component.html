@@ -15,7 +15,7 @@
 <p-dialog header="Profile" [(visible)]="displayMember" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
     [draggable]="false" [resizable]="false">
     <div *ngIf = "displayMember">{{profile.empid}}</div>
-    <div *ngIf = "displayMember">{{profile.deatil.name}}</div>
+    <div *ngIf = "displayMember">{{profile.details.name}}</div>
 </p-dialog>
 
 <p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Add Member"></p-button>
