@@ -14,9 +14,4 @@ export class LibraryComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  onClick(eve){
-      console.log(eve);
-  }
-
 }
