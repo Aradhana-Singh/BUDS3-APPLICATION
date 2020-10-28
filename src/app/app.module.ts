@@ -22,6 +22,8 @@ import { TeamService } from './team.service';
 import { AddMemberComponent } from './myteam/add-member/add-member.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {InputTextareaModule} from 'primeng/inputtextarea';
+import {ListboxModule} from 'primeng/listbox';
+import {AccordionModule} from 'primeng/accordion';
 
 
 @NgModule({
@@ -34,7 +36,7 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
     HolderComponent,
     PageNotFoundComponent,
     MyteamComponent,
-    AddMemberComponent
+    AddMemberComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +49,8 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
     ButtonModule,
     DialogModule,
     BrowserAnimationsModule,
+    AccordionModule, 
+    ListboxModule,
     ReactiveFormsModule,
     InputTextareaModule
   ],
