@@ -94,7 +94,7 @@
             </div>
         </div>
         <div class="p-field">
-            <p-button label="Submit" (click)="onAddMember()"></p-button>
+            <p-button label="Submit" [disabled] = "!form.valid" (click)="onAddMember()"></p-button>
         </div> 
     </div>     
 </form>
