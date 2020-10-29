@@ -48,16 +48,10 @@
 .contact-form button:hover{
     background: #ff9d4c;
 }
-input{
-    border: 1px solid #00a8eb;
-}
+
 input:focus{
     border: 1px solid #ff9d4c;
     box-shadow: 1px 1px 1px 1px #ff9d4c;
-}
-
-textarea{
-    border: 1px solid #00a8eb;
 }
 
 textarea:focus{
