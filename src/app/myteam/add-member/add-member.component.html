@@ -7,7 +7,6 @@
             </div>
             <div class = "validators" *ngIf ="form.touched">
                 <span>
-                    <br>
                     <i class="fa fa-times-circle" style = "color: firebrick;" *ngIf = "form.controls.name.invalid" ></i>
                     <i class="fa fa-check-circle" style = "color: green;" *ngIf = "form.controls.name.valid" ></i>
                     Username should be minimum 4 characters long
@@ -20,7 +19,6 @@
             </div>
             <div class = "validators" *ngIf ="form.touched">
                 <span>
-                    <br>
                     <i class="fa fa-times-circle" style = "color: firebrick;" *ngIf = "form.controls.empid.invalid" ></i>
                     <i class="fa fa-check-circle" style = "color: green;" *ngIf = "form.controls.empid.valid" ></i>
                    Empid must me a number
@@ -33,7 +31,6 @@
             </div>
             <div class = "validators" *ngIf ="form.touched">
                 <span>
-                    <br>
                     <i class="fa fa-times-circle" style = "color: firebrick;" *ngIf = "form.controls.email.invalid" ></i>
                     <i class="fa fa-check-circle" style = "color: green;" *ngIf = "form.controls.email.valid" ></i>
                    Must be a proper Email
@@ -46,7 +43,6 @@
             </div>
             <div class = "validators" *ngIf ="form.touched">
                 <span>
-                    <br>
                     <i class="fa fa-times-circle" style = "color: firebrick;" *ngIf = "form.controls.phone.invalid" ></i>
                     <i class="fa fa-check-circle" style = "color: green;" *ngIf = "form.controls.phone.valid" ></i>
                    Phone number must contain exactly 10 digits                   
@@ -61,6 +57,13 @@
         <div class="p-field">
             <div class =form-group>
                 <input formControlName = "designation" type = "text" placeholder = "Designation" pInputText>
+            </div>
+            <div class = "validators" *ngIf ="form.touched">
+                <span>
+                    <i class="fa fa-times-circle" style = "color: firebrick;" *ngIf = "form.controls.designation.invalid" ></i>
+                    <i class="fa fa-check-circle" style = "color: green;" *ngIf = "form.controls.designation.valid" ></i>
+                   Enter your designation                   
+                </span>
             </div>
         </div>
         <div class="p-field">
@@ -93,7 +96,7 @@
                 <input formControlName = "linkedin" type = "text" placeholder = "LinkedIn-ID" pInputText>
             </div>
         </div>
-        <div class="p-field">
+        <div class="submit-button">
             <p-button label="Submit" [disabled] = "!form.valid" (click)="onAddMember()"></p-button>
         </div> 
     </div>     

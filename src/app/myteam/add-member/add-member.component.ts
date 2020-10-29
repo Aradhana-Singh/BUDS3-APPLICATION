@@ -19,7 +19,7 @@ export class AddMemberComponent implements OnInit {
                   empid:['', [Validators.required,empidValidator]],
                   email:['', emailValidator],
                   phone:['', phonevalidator],
-                  designation: '',
+                  designation: ['', Validators.required],
                   experience:'',
                   skills:'',
                   address:'',
@@ -54,6 +54,7 @@ export class AddMemberComponent implements OnInit {
   
   onAddMember(){
       this.teamService.addMember(this.form.value);
+      this.form.reset();
       }
     }
 
