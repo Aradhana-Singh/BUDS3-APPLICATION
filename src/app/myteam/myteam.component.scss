@@ -157,3 +157,31 @@
     margin-top: 4em;
     margin-bottom: 1.5em;
   }
+
+  ::ng-deep .p-button { 
+     border-radius: 50% !important;
+     background-color: transparent !important;
+     border: none !important;
+     color: #e1e5ed !important;
+  }
+
+  ::ng-deep .pi {
+     font-size: 2rem !important;
+  }
+
+  ::ng-deep .pi:hover {
+     color: #ff9f00;
+  }
+
+  ::ng-deep .pi:active {
+     border: none;
+  }
+  .table tr{
+     border:0;
+  }
+  .table td{
+     border:0;
+  }
+  .table th{
+     border: 0;
+  }

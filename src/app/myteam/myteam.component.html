@@ -15,10 +15,16 @@
 
     <header class="text-center py-4 header font-weight-bold">
         <div class="container">
-          <h1 class="font-weight-light">My Team</h1>
+          <h1 class="font-weight-light">
+              My Team
+              <p-button (click)="showModalDialog()" style="float: right;" icon="pi pi-plus"></p-button>
+          </h1>
+          
         </div>
+
+        
     </header>
-    
+
       <!-- Page Content -->
       <div class="container">
         <div class="row" >
@@ -81,30 +87,55 @@
 
 </div>
 
-
-<p-dialog header="Profile" [(visible)]="displayMember" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+<p-dialog  header="Profile" [(visible)]="displayMember" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
     [draggable]="false" [resizable]="false">
-    <div class="card profile-card-1 col-md-6 align-self-center">
-        <img src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="profile-sample1" class="background"/>
-        <img src="https://www.logolynx.com/images/logolynx/97/97e88682fa82ed11f3bf96dcf8479635.png" alt="profile-image" class="profile"/>
-        <div class="card-content">
-        <h2>abc<small>Designation: dig</small></h2>
-        <h2><small>Employee Id: 123</small></h2>
-        </div>
-    </div>
-    <div *ngIf = "displayMember">{{profile.empid}}</div>
-    <div *ngIf = "displayMember">{{profile.name}}</div>
-    <div *ngIf = "displayMember">{{profile.designation}}</div>
-    <div *ngIf = "displayMember">{{profile.experience}}</div>
-    <div *ngIf = "displayMember">{{profile.skills}}</div>
-    <div *ngIf = "displayMember">{{profile.bio}}</div>
-    <div *ngIf = "displayMember">{{profile.address}}</div>
-    <div *ngIf = "displayMember">{{profile.facebook}}</div>
-    <div *ngIf = "displayMember">{{profile.github}}</div>
-    <div *ngIf = "displayMember">{{profile.linkedin}}</div>
+    <table class="table table-striped ">
+      <tbody>
+        <tr>
+          <th>Fullname</th>
+          <td  *ngIf = "displayMember">{{profile.name}}</td>
+        </tr>
+        <tr>
+          <th>Employee Id</th>
+          <td  *ngIf = "displayMember">{{profile.empid}}</td>
+        </tr>
+        <tr>
+          <th>Designation</th>
+          <td  *ngIf = "displayMember">{{profile.designation}}</td>
+        </tr>
+        <tr>
+          <th>Bio</th>
+          <td  *ngIf = "displayMember">{{profile.bio}}</td>
+        </tr>
+        <tr>
+          <th>Experience</th>
+          <td  *ngIf = "displayMember">{{profile.experience}}</td>
+        </tr>
+        <tr>
+          <th>Skills</th>
+          <td  *ngIf = "displayMember">{{profile.skills}}</td>
+        </tr>
+        <tr>
+          <th>Address</th>
+          <td *ngIf = "displayMember">{{profile.address}}</td>
+        </tr>
+        <tr>
+          <th>Github</th>
+          <td  *ngIf = "displayMember">{{profile.github}}</td>
+        </tr>
+        <tr>
+          <th>Linkedin</th>
+          <td  *ngIf = "displayMember">{{profile.linkedin}}</td>
+        </tr>
+        <tr>
+          <th>Facebook</th>
+          <td  *ngIf = "displayMember">{{profile.facebook}}</td>
+        </tr>
+      </tbody>
+    </table>
 </p-dialog>
 
-<p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Add Member"></p-button>
+
 <p-dialog header="Add Team Member" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
     [draggable]="false" [resizable]="false">
         <app-add-member></app-add-member>
