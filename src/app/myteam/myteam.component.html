@@ -1,12 +1,7 @@
-<div class="p-grid">
-    <div class="p-md-4 p-sm-6" *ngFor = "let team of teams" >
-        <p-card >
-            <div  class=" p-d-flex p-ac-center p-flex-column" >
-                <p-header>{{team.empid}}</p-header>
-                <p-header>{{team.name}}</p-header>
-                <!-- <button pButton type="button" label="Click" label="Profile" class="p-button-info"></button> -->
-                <p-button (click)="showMemberDialog(team)" icon="pi pi-external-link" label="Show"></p-button>
-            </div>
+<div class="p-grid teamGrid">
+    <div class="p-md-4 p-col-12 p-sm-12" *ngFor = "let team of teams" >
+        <p-card class="teamCard" (click)="showMemberDialog(team)">
+                <p >{{team.name}}</p>
         </p-card>
     </div>
 </div>
