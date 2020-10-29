@@ -3,7 +3,6 @@ body{
     margin:0px;
     padding:0px;
     font-family: "Montserrat"; 
-    
 }
 
 h2 { 
@@ -13,7 +12,7 @@ h2 {
 .p-listbox .p-listbox-list .p-listbox-item .p-highlight {
     background-color: #ffffff !important;
 }
-}
+
 .text-orange{
     color:#ff9f00;
 }
@@ -24,4 +23,8 @@ h2 {
 
 .text-ocean{
     color: #00A8EB;
+}
+
+.bold {
+    font-weight: 900;
 }
