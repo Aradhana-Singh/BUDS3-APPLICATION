@@ -25,7 +25,7 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 import {ListboxModule} from 'primeng/listbox';
 import {AccordionModule} from 'primeng/accordion';
 import { FooterComponent } from './footer/footer.component';
-
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -54,7 +54,8 @@ import { FooterComponent } from './footer/footer.component';
     AccordionModule, 
     ListboxModule,
     ReactiveFormsModule,
-    InputTextareaModule
+    InputTextareaModule,
+    TableModule
   ],
   providers: [TeamService],
   bootstrap: [AppComponent]
