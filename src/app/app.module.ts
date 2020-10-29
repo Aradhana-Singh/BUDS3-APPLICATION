@@ -24,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {ListboxModule} from 'primeng/listbox';
 import {AccordionModule} from 'primeng/accordion';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import {AccordionModule} from 'primeng/accordion';
     PageNotFoundComponent,
     MyteamComponent,
     AddMemberComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
