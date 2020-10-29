@@ -15,10 +15,16 @@
 
     <header class="text-center py-4 header font-weight-bold">
         <div class="container">
-          <h1 class="font-weight-light">My Team</h1>
+          <h1 class="font-weight-light">
+              My Team
+              <p-button (click)="showModalDialog()" style="float: right;" icon="pi pi-plus"></p-button>
+          </h1>
+          
         </div>
+
+        
     </header>
-    
+
       <!-- Page Content -->
       <div class="container">
         <div class="row" >
@@ -104,7 +110,7 @@
     <div *ngIf = "displayMember">{{profile.linkedin}}</div>
 </p-dialog>
 
-<p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Add Member"></p-button>
+
 <p-dialog header="Add Team Member" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
     [draggable]="false" [resizable]="false">
         <app-add-member></app-add-member>
