@@ -1,0 +1,20 @@
+.teamGrid{
+    padding: 20px;
+    border: 1px solid #cdcdcd;
+    margin: 20px;
+
+    .teamCard{
+        margin:10px;
+        padding:10px ;
+        text-align: center;
+        
+        &:hover{
+            
+            cursor: pointer;
+        }
+
+       
+
+    }
+}
+

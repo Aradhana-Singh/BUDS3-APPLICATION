@@ -60,13 +60,7 @@ export class TeamService {
   getData() {
     return this.__data;
   }
-
-  // addData(obj: TeamMember) {
-  //   //validate obj
-  //   this.__data.push(obj);
-  //   console.log(this.__data);
-  // }
-  addMember(empid:string,name:string,email:string,designation:string,phone:string,address:string,skills:string,bio:string,facebook:string,github:string,linkedin:string, experience: string){
-    this.__data.push({empid: empid,name: name,email: email,designation: designation,phone: phone,address: address,skills: skills, bio: bio, facebook: facebook, github: github, linkedin: linkedin, experience: experience});
+  addMember(memeber: TeamMember){
+    this.__data.push(memeber);
   }
 }

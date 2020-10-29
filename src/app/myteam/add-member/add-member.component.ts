@@ -52,41 +52,9 @@ export class AddMemberComponent implements OnInit {
     // console.log(x);
   }
   
-  onAddMember(name,empid,email,address,phone,designation,experience,skills,bio,facebook,github,linkedin){
-    // console.log(x, y, z);
-    console.log(this.form.value);
-    console.log(this.name);
-    console.log(name,empid,email,address,phone,designation,experience,skills,bio,facebook,github,linkedin);
-    this.teamMember = {
-      "empid": empid,
-      "name": name,
-      "email": email,
-      "address": address,
-      "phone": phone,
-      "designation": designation,
-      "experience": experience,
-      "skills": skills,
-      "bio": bio,
-      "facebook": facebook,
-      "github": github,
-      "linkedin": linkedin
+  onAddMember(){
+      this.teamService.addMember(this.form.value);
       }
-      this.teamService.addMember(empid,name,email,designation,phone,address,skills,bio,facebook,github,linkedin,experience);
-
-      // "details": {
-      //   "empid": empid,
-      //   "name": name,
-      //   "email": email
-      }
-      
-      // onSubmit(){
-      //   console.log(this.form.value);
-      //   console.log(this.empid,"hello");
-      //   this.teamService.addMember(this.empid,this.name,this.email,this.designation,this.phone,this.address,this.skills,this.bio,this.facebook,this.github,this.linkedin,this.experience);
-      //   this.form.markAsTouched();
-      // }
     }
-    // this.teamService.addData(this.teamMember);
-
 
 
