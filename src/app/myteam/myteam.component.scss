@@ -22,16 +22,16 @@
  
  
 
-// .content {
-//     max-width: 1024px;
-//     width: 100%;
-//     padding: 0 4%;
-//     padding-top: 10px;
-//     margin: 0 auto;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//  }
+.content {
+    max-width: 1024px;
+    width: 100%;
+    padding: 0 4%;
+    padding-top: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
  
 //  @media screen and (max-width: 767px) {
 //     .content {
@@ -66,7 +66,7 @@
     width: 50%;
     height: 40px;
     max-width:40px;
-    background: linear-gradient(90deg, #faa056 0%, #ff9d4c 40%, rgba(0, 0, 0, 0.28) 60%);
+    background: linear-gradient(90deg, #51b2d8 0%, #00a8eb 40%, rgba(0, 0, 0, 0.28) 60%);
     border-radius: 100%;
     display: flex;
     justify-content: center;
@@ -77,11 +77,16 @@
     background-size: 200px;
     margin-bottom: 30px;
  }
+
+ .card:hover .icon{
+    transition: all 0.3s ease;
+    background: #ff9d4c;
+ }
  
-//  .material-icons.md-18 { font-size: 18px; }
-//  .material-icons.md-24 { font-size: 24px; }
-//  .material-icons.md-36 { font-size: 36px; }
-//  .material-icons.md-48 { font-size: 48px; }
+ .material-icons.md-18 { font-size: 18px; }
+ .material-icons.md-24 { font-size: 24px; }
+ .material-icons.md-36 { font-size: 36px; }
+ .material-icons.md-48 { font-size: 48px; }
  
 //  .card .title {
 //     width: 100%;
@@ -122,18 +127,18 @@
 //     max-height:40px;
 //  }
  
-//  .card:hover .icon {
-//     background-position: -120px;
-//     transition: all 0.3s ease;
-//  }
+ .card:hover .icon {
+    background-position: -120px;
+    transition: all 0.3s ease;
+ }
  
-//  .card:hover .icon i {
-//     background: linear-gradient(90deg, #FF7E7E, #FF4848);
-//     -webkit-background-clip: text;
-//      -webkit-text-fill-color: transparent;
-//     opacity: 1;
-//     transition: all 0.3s ease;
-//  }
+ .card:hover .icon i {
+    background: linear-gradient(90deg, #fcac6a 0%, #ff9d4c 40%, rgba(0, 0, 0, 0.28) 60%);
+    -webkit-background-clip: text;
+     -webkit-text-fill-color: wihte;
+    opacity: 1;
+    transition: all 0.3s ease;
+ }
  .card{
     border-radius: 5%;
     background: #fff;
