@@ -25,7 +25,7 @@ export default{
                         },
                         {
                             "label":"Recording",
-                            "url":"google.com"
+                            "url":"https://www.google.com"
                         },
                     ]
                 },
@@ -34,11 +34,11 @@ export default{
                     "items":[
                         {
                             "label":"Presntation (PPT)",
-                            "url":"google.com"
+                            "url":"https://www.google.com"
                         },
                         {
                             "label":"Recording",
-                            "url":"google.com"
+                            "url":"https://www.google.com   "
                         },
                     ]
                 }
