@@ -97,7 +97,8 @@
             </div>
         </div>
         <div class="submit-button">
-            <p-button label="Submit" [disabled] = "!form.valid" (click)="onAddMember()"></p-button>
+            <button type="button" class="btn btn-primary btn-lg" [disabled] = "!form.valid" (click)="onAddMember()">Submit</button>
+            <!-- <p-button label="Submit" [disabled] = "!form.valid" (click)="onAddMember()"></p-button> -->
         </div> 
     </div>     
 </form>

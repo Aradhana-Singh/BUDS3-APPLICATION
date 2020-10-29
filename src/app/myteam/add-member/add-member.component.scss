@@ -18,7 +18,9 @@ p {
 }
 
 .submit-button{
-    width: 50%;
+    display:flex;
+    justify-content: center;
+    width: 100%;
     margin:auto;
 }
 
@@ -41,3 +43,11 @@ p {
     box-shadow: 1px 1px 1px 1px #ff9d4c !important;
 }
 
+.p-button{
+    background: green;
+    color: black;
+}
+button.btn.btn-primary{
+    padding-left: 100px;
+    padding-right: 100px;
+}
